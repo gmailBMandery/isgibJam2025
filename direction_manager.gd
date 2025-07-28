@@ -14,4 +14,3 @@ func _process(delta: float) -> void:
 
 func Direction(direction: int) -> void:
 	DirectionDetected.emit(direction)
-	pass
