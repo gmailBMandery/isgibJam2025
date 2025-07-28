@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwcmcydflh6wv"]
+
+[ext_resource type="PackedScene" uid="uid://276at1f0ovvo" path="res://player.tscn" id="1_y1i5d"]
+[ext_resource type="PackedScene" uid="uid://d2m1a64awl3wj" path="res://level_manager.tscn" id="2_4tkcf"]
+[ext_resource type="PackedScene" uid="uid://cbdiylr48ldr3" path="res://DirectionManager.tscn" id="2_m856i"]
+
+[node name="Main" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+visible = false
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="Player" parent="." instance=ExtResource("1_y1i5d")]
+position = Vector2(263, 198)
+
+[node name="LevelManager" parent="." instance=ExtResource("2_4tkcf")]
+direction_manager = ExtResource("2_m856i")

@@ -1,0 +1,38 @@
+[gd_scene load_steps=5 format=3 uid="uid://cbdiylr48ldr3"]
+
+[ext_resource type="Script" path="res://north.gd" id="1_5npcy"]
+[ext_resource type="Script" path="res://direction_manager.gd" id="1_swg2o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3xly"]
+size = Vector2(642, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wi48y"]
+size = Vector2(17, 403)
+
+[node name="DirectionManager" type="Node"]
+script = ExtResource("1_swg2o")
+
+[node name="North" type="Area2D" parent="."]
+script = ExtResource("1_5npcy")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="North"]
+position = Vector2(321, -12)
+shape = SubResource("RectangleShape2D_a3xly")
+
+[node name="South" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="South"]
+position = Vector2(323, 372)
+shape = SubResource("RectangleShape2D_a3xly")
+
+[node name="East" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="East"]
+position = Vector2(656, 180)
+shape = SubResource("RectangleShape2D_wi48y")
+
+[node name="West" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="West"]
+position = Vector2(-11, 181)
+shape = SubResource("RectangleShape2D_wi48y")
